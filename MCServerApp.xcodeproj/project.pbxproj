@@ -14,6 +14,8 @@
 		54B7BA9B2938E5130023FA98 /* MCServerApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54B7BA992938E5130023FA98 /* MCServerApp.xcdatamodeld */; };
 		54B7BA9D2938E5140023FA98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B7BA9C2938E5140023FA98 /* Assets.xcassets */; };
 		54B7BAA02938E5140023FA98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B7BA9E2938E5140023FA98 /* LaunchScreen.storyboard */; };
+		54B7BAA82938E9180023FA98 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B7BAA72938E9180023FA98 /* SecondViewController.swift */; };
+		54B7BAAA2938E9420023FA98 /* ServerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B7BAA92938E9420023FA98 /* ServerClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		54B7BA9C2938E5140023FA98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54B7BA9F2938E5140023FA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54B7BAA12938E5140023FA98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54B7BAA72938E9180023FA98 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		54B7BAA92938E9420023FA98 /* ServerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				54B7BA922938E5130023FA98 /* SceneDelegate.swift */,
 				54B7BA942938E5130023FA98 /* ViewController.swift */,
 				54B7BA962938E5130023FA98 /* Main.storyboard */,
+				54B7BAA92938E9420023FA98 /* ServerClass.swift */,
+				54B7BAA72938E9180023FA98 /* SecondViewController.swift */,
 				54B7BA9C2938E5140023FA98 /* Assets.xcassets */,
 				54B7BA9E2938E5140023FA98 /* LaunchScreen.storyboard */,
 				54B7BAA12938E5140023FA98 /* Info.plist */,
@@ -144,6 +150,8 @@
 				54B7BA9B2938E5130023FA98 /* MCServerApp.xcdatamodeld in Sources */,
 				54B7BA952938E5130023FA98 /* ViewController.swift in Sources */,
 				54B7BA912938E5130023FA98 /* AppDelegate.swift in Sources */,
+				54B7BAAA2938E9420023FA98 /* ServerClass.swift in Sources */,
+				54B7BAA82938E9180023FA98 /* SecondViewController.swift in Sources */,
 				54B7BA932938E5130023FA98 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
