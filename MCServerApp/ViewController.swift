@@ -7,8 +7,9 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
-    
+    let defaults = UserDefaults.standard
     // TODO: Connect outlets to View
     @IBOutlet weak var numPlayers: UILabel!
     @IBOutlet weak var labelBedRock: UILabel!
@@ -46,7 +47,6 @@ class ViewController: UIViewController {
         let fetch: String?
         let error: String?
     }
-    
     func pingServer(_ ipAddress:String) throws -> ServerResponse {
         let requestUrl =
         // .addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
@@ -61,6 +61,22 @@ class ViewController: UIViewController {
             throw ServerReponseError.fatal
         }
     }
+    
+    func editServer(_ located: Int, _ server:Server){
+        serverList[located] = server
+        defaults.set(serverList, forKey: "Servers")
+    }
+    
+    func deleteServer(_ located: Int){
+        serverList.remove(at: located)
+        defaults.set(serverList, forKey: "Servers")
+    }
+    
+    func addServer(_ server: Server){
+        serverList.append(server)
+        defaults.set(serverList, forKey: "Servers")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
