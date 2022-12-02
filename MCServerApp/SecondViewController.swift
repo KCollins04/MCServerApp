@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController{
 
     @IBOutlet weak var textName: UITextField!
     
