@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Server {
+    var name: String
+    var ip: String
+    var bedrock: Bool
+}
