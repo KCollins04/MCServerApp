@@ -79,13 +79,6 @@
                             <color key="tintColor" systemColor="tintColor"/>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="imagePlayer" destination="8bC-Xf-vdC" id="nxf-lk-3AK"/>
-                        <outlet property="labelName" destination="mkE-49-05k" id="D0P-iK-cFZ"/>
-                        <outlet property="lebelBedRock" destination="5yr-h5-2rG" id="a1f-x0-hmQ"/>
-                        <outlet property="lebelVersion" destination="hHV-qh-7nJ" id="4yL-1V-Nr2"/>
-                        <outlet property="numPlayers" destination="eGA-kF-5df" id="0Ik-fu-bUS"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
