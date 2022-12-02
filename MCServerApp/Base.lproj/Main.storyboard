@@ -79,6 +79,13 @@
                             <color key="tintColor" systemColor="tintColor"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imagePlayer" destination="8bC-Xf-vdC" id="nxf-lk-3AK"/>
+                        <outlet property="labelName" destination="mkE-49-05k" id="D0P-iK-cFZ"/>
+                        <outlet property="lebelBedRock" destination="5yr-h5-2rG" id="a1f-x0-hmQ"/>
+                        <outlet property="lebelVersion" destination="hHV-qh-7nJ" id="4yL-1V-Nr2"/>
+                        <outlet property="numPlayers" destination="eGA-kF-5df" id="0Ik-fu-bUS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,6 +119,9 @@
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4jE-sa-obE">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchBedRock:" destination="WkR-oV-QmK" eventType="valueChanged" id="2u7-Vs-H5q"/>
+                                        </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beadrock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYW-Ek-CWr">
                                         <rect key="frame" x="103" y="0.0" width="107" height="31"/>
@@ -126,6 +136,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add Server"/>
+                                <connections>
+                                    <action selector="addServer:" destination="WkR-oV-QmK" eventType="touchUpInside" id="XxP-Hn-NKF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jsp-UN-9bM"/>
@@ -143,6 +156,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HF6-9C-gcq"/>
+                    <connections>
+                        <outlet property="textIPAdress" destination="3vC-SL-fil" id="WoT-Xz-bRL"/>
+                        <outlet property="textName" destination="A4q-ik-cot" id="PzN-cx-BM0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msk-10-wsI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
