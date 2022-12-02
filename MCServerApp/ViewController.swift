@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         let fetch: String
     }
     
-    func pingServer(_ ipAddress:String) -> ServerResponse {
+    func pingServer(_ ipAddress:String) throws -> ServerResponse {
         let requestUrl =
         // .addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         "https://eu.mc-api.net/v3/server/ping/" + ipAddress
