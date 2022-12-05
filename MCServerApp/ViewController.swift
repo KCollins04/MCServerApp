@@ -81,8 +81,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         do{
-            try print(pingServer("mc.hypixel.net").status)
-            try print(pingServer("mc.doesnotexist.net").status)
+            try print(pingServer("mc.hypixel.net").description ?? "Not found")
+            try print(pingServer("mc.doesnotexist.net").description ?? "Not found")
         } catch{
             print("ERROR")
         }
