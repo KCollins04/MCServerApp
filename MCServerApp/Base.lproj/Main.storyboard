@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="810"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="96" id="Cc3-qX-zu2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ServerCell" rowHeight="96" id="Cc3-qX-zu2" customClass="ServerTableViewCell" customModule="MCServerApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="390" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cc3-qX-zu2" id="14B-jn-8ME">
@@ -69,6 +69,12 @@
                                                 <constraint firstAttribute="bottom" secondItem="0Pq-PZ-INx" secondAttribute="bottom" id="pNM-Cb-WWD"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="serverIcon" destination="0Pq-PZ-INx" id="1re-E4-QxX"/>
+                                            <outlet property="serverMOTD" destination="dlA-wc-FoH" id="gbM-8h-hfv"/>
+                                            <outlet property="serverName" destination="nkh-wf-jRQ" id="sKv-oE-bwH"/>
+                                            <outlet property="serverPlayerCount" destination="apg-Ia-IAh" id="8S3-Uk-cGy"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -90,6 +96,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="serverTableView" destination="x62-wQ-Ydg" id="mqr-rx-UyD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
