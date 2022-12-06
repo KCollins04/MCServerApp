@@ -40,11 +40,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let sample: [String]?
         }
         
-        enum DescriptionReponse {
-            case string(String)
-            case dictionary(Dictionary<String, Any>)
-        }
-        
         let online: Bool
         let status: Bool
         let favicon_base64: String?
@@ -53,7 +48,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cache: CacheResponse?
         let version: VersionResponse?
         let players: PlayersReponse?
-        let description: DescriptionReponse?
+      //  let description: DescriptionReponse?
         let fetch: String?
         let error: String?
     }
@@ -92,7 +87,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if let imageData = imageData {
                 cell.serverIcon.image = UIImage(data: imageData)
             }
-            cell.serverMOTD.text = serverData.description
+            cell.serverMOTD.text = String(serverData.online)
         } catch let error{
             print(error)
         }
@@ -117,8 +112,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         serverTableView.reloadData()
         
         do{
-            try print(pingServer("mc.hypixel.net").description ?? "Not found")
-            try print(pingServer("mc.doesnotexist.net").description ?? "Not found")
+            try print(pingServer("mc.hypixel.net").online)
+            try print(pingServer("mc.doesnotexist.net").online)
         } catch{
             print("ERROR")
         }
