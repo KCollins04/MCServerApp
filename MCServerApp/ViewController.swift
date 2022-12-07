@@ -119,7 +119,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     @IBAction func unwind(_ seg: UIStoryboardSegue){
-        performSegue(withIdentifier: "unwindHome:", sender: self)
+        serverTableView.reloadData()
     }
     
 }

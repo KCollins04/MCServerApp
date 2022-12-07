@@ -166,7 +166,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Add Server"/>
                                 <connections>
                                     <action selector="addServer:" destination="WkR-oV-QmK" eventType="touchUpInside" id="XxP-Hn-NKF"/>
-                                    <segue destination="AGu-gO-Bpl" kind="unwind" unwindAction="unwindHome:" id="fBM-CC-r4s"/>
+                                    <segue destination="AGu-gO-Bpl" kind="unwind" identifier="unwindHome" unwindAction="unwind:" id="fBM-CC-r4s"/>
                                 </connections>
                             </button>
                         </subviews>

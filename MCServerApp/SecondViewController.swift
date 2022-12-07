@@ -38,6 +38,9 @@ class SecondViewController: UIViewController{
         i = textIPAdress.text!
         addServerGlobal(Server(name: n, ip: i, bedrock: br))
         print(serverList)
+        
+        performSegue(withIdentifier: "unwindHome", sender: self)
+
     }
     
 
