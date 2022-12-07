@@ -83,7 +83,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         do{
             try serverData = pingServer(server.ip)
             let imageData = Data(base64Encoded: String((serverData.favicon_base64 ?? defaultIcon).dropFirst(22)))
-            print(String((serverData.favicon_base64 ?? defaultIcon)))
             if let imageData = imageData {
                 cell.serverIcon.image = UIImage(data: imageData)
             }
@@ -102,16 +101,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        addServerGlobal(Server(name: "Hypixel ", ip: "us.hypixel.net", bedrock: false))
 
         serverTableView.delegate = self
         serverTableView.dataSource = self
         
-        addServerGlobal(Server(name: "Mineplex", ip: "us.mineplex.com", bedrock: false))
-        addServerGlobal(Server(name: "Custom", ip: "129.213.50.224", bedrock: false))
+       
         
         print(serverList)
-        serverTableView.reloadData()
         
         do{
             try print(pingServer("mc.hypixel.net").online)

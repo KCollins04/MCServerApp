@@ -18,8 +18,7 @@ class SecondViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        n = textName.text!
-        i = textIPAdress.text!
+     
  
         // Do any additional setup after loading the view.
     }
@@ -35,8 +34,10 @@ class SecondViewController: UIViewController{
         }
     }
     @IBAction func addServer(_ sender: UIButton) {
-        
+        n = textName.text!
+        i = textIPAdress.text!
         addServerGlobal(Server(name: n, ip: i, bedrock: br))
+        print(serverList)
     }
     
 

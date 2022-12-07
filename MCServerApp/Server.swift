@@ -8,7 +8,7 @@
 import Foundation
 let defaults = UserDefaults.standard
 
-struct Server {
+struct Server: Codable {
     var name: String
     var ip: String
     var bedrock: Bool
@@ -16,19 +16,51 @@ struct Server {
 
 func editServerGlobal(_ located: Int, _ server:Server){
     serverList[located] = server
-    //defaults.set(serverList, forKey: "Servers")
-}
+    do{
+                 let encoder = JSONEncoder()
+                 let serversEncoded = try encoder.encode(serverList)
+                 defaults.setValue(serversEncoded, forKey: "Servers")
+              }catch let err{
+                 print(err)
+              }}
 
 func deleteServerGlobal(_ located: Int){
     serverList.remove(at: located)
-   // defaults.set(serverList, forKey: "Servers")
-}
+    do{
+                 let encoder = JSONEncoder()
+                 let serversEncoded = try encoder.encode(serverList)
+                 defaults.setValue(serversEncoded, forKey: "Servers")
+              }catch let err{
+                 print(err)
+              }}
 
 func addServerGlobal(_ server: Server){
     serverList.append(server)
-  //  defaults.set(serverList, forKey: "Servers")
+    do{
+                 let encoder = JSONEncoder()
+                 let serversEncoded = try encoder.encode(serverList)
+                 defaults.setValue(serversEncoded, forKey: "Servers")
+              }catch let err{
+                 print(err)
+              }
+
+
 }
 
-var serverList = defaults.object(forKey: "Servers") as? [Server] ?? [Server]()
+func getServers() -> [Server]{
+    
+    guard let serversData = defaults.object(forKey: "Servers") as? Data else{return []}
+             do{
+                 let decoder = JSONDecoder()
+                 let servers = try decoder.decode([Server].self, from: serversData)
+                 return servers
+             }catch{
+                 return([])
+           }
+        }
+
+var serverList = getServers()
+
+//var serverList = defaults.object(forKey: "Servers") as? [Server] ?? [Server]()
 
 
