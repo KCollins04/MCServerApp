@@ -97,6 +97,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+
+        if editingStyle == .delete{
+
+            // remove the item from the data model
+            deleteServerGlobal(indexPath.row)
+
+            // delete the table view row
+            tableView.deleteRows(at: [indexPath], with: .fade)
+
+        } else if editingStyle == .insert {
+            print("How did you get here?")
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
