@@ -166,6 +166,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Add Server"/>
                                 <connections>
                                     <action selector="addServer:" destination="WkR-oV-QmK" eventType="touchUpInside" id="XxP-Hn-NKF"/>
+                                    <segue destination="AGu-gO-Bpl" kind="unwind" unwindAction="unwindHome:" id="fBM-CC-r4s"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -190,6 +191,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msk-10-wsI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="AGu-gO-Bpl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1853.8461538461538" y="3.5545023696682461"/>
         </scene>
