@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		544F30EC29421E2800E3F294 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544F30EB29421E2800E3F294 /* ThirdViewController.swift */; };
 		54B7BA912938E5130023FA98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B7BA902938E5130023FA98 /* AppDelegate.swift */; };
 		54B7BA932938E5130023FA98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B7BA922938E5130023FA98 /* SceneDelegate.swift */; };
 		54B7BA952938E5130023FA98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B7BA942938E5130023FA98 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		544F30EB29421E2800E3F294 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		54B7BA8D2938E5130023FA98 /* MCServerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCServerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B7BA902938E5130023FA98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54B7BA922938E5130023FA98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				54B7BA922938E5130023FA98 /* SceneDelegate.swift */,
 				54B7BA942938E5130023FA98 /* ViewController.swift */,
 				54B7BA962938E5130023FA98 /* Main.storyboard */,
+				544F30EB29421E2800E3F294 /* ThirdViewController.swift */,
 				54B7BAA92938E9420023FA98 /* Server.swift */,
 				54B7BAA72938E9180023FA98 /* SecondViewController.swift */,
 				54B7BA9C2938E5140023FA98 /* Assets.xcassets */,
@@ -156,6 +159,7 @@
 				54B7BA912938E5130023FA98 /* AppDelegate.swift in Sources */,
 				54B7BAAA2938E9420023FA98 /* Server.swift in Sources */,
 				54B7BAA82938E9180023FA98 /* SecondViewController.swift in Sources */,
+				544F30EC29421E2800E3F294 /* ThirdViewController.swift in Sources */,
 				54B7BA932938E5130023FA98 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

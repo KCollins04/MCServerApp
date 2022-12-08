@@ -104,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="1030.7692307692307" y="3.5545023696682461"/>
         </scene>
-        <!--View Controller-->
+        <!--Third View Controller-->
         <scene sceneID="tEb-xE-1uC">
             <objects>
-                <viewController id="q3t-l8-eA7" sceneMemberID="viewController">
+                <viewController id="q3t-l8-eA7" customClass="ThirdViewController" customModule="MCServerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9US-vI-yDb">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,6 +177,15 @@
                         <viewLayoutGuide key="safeArea" id="0SK-rf-hy0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="bedRock" destination="cK2-lo-hSq" id="Af8-ac-6ZC"/>
+                        <outlet property="ipAdress" destination="lUp-NC-lUF" id="bOz-lW-hPD"/>
+                        <outlet property="motDay" destination="yoR-3C-0Ch" id="CtI-h1-x4i"/>
+                        <outlet property="playerImage" destination="wvt-zb-Abm" id="3me-1f-dIX"/>
+                        <outlet property="playerTableView" destination="Q5M-Tq-1hb" id="ykz-SX-P44"/>
+                        <outlet property="serverName" destination="NJN-4k-iO8" id="CAE-ti-Tgs"/>
+                        <outlet property="version" destination="eY5-u4-cql" id="ICn-Wx-mQg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2q-Ub-dVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
