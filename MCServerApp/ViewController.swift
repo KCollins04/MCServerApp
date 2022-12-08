@@ -91,10 +91,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         do{
             let selectedServer = try pingServer(server.ip)
             let selectedServerInfo = server
+            print(selectedServerInfo)
+            self.performSegue(withIdentifier: "serverDetails", sender: self)
         } catch{
             print("ERROR")
         }
-            self.performSegue(withIdentifier: "serverDetails", sender: self)
+            
     }
     
     
@@ -102,10 +104,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if(segue.identifier == "serverDetails"){
             let destinationNavigationController = segue.destination as! ThirdViewController
             let targetController = destinationNavigationController
-            
+            print("test")
+            print(selectedServer)
             // Sets the variables in the second view controller
             targetController.selectedServer = selectedServer
-            targetController.selectedServerInfo = selectedServer
+            targetController.selectedServerInfo = selectedServerInfo
         } else{
             
         }

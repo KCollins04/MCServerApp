@@ -25,7 +25,7 @@ class ThirdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(selectedServer)
         let imageData = Data(base64Encoded: String((selectedServer.favicon_base64 ?? defaultIcon).dropFirst(22)))
         if let imageData = imageData {
             playerImage.image = UIImage(data: imageData)
@@ -37,7 +37,7 @@ class ThirdViewController: UIViewController {
             serverName.text = selectedServerInfo.name
            
             motDay.text = selectedServer.online ? "Online" : "Offline"
-            bedRock.text = selectedServerInfo.bedrock
+            bedRock.text = String(selectedServerInfo.bedrock)
             
 
             
