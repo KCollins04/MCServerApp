@@ -83,13 +83,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     var selectedServer: ServerResponse!
-    
+    var selectedServerInfo: Server!
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
             // Sets the variables to be gotten by the prepare for segue function
         let server = serverList[indexPath.row]
         do{
             let selectedServer = try pingServer(server.ip)
+            let selectedServerInfo = server
         } catch{
             print("ERROR")
         }
@@ -104,6 +105,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             // Sets the variables in the second view controller
             targetController.selectedServer = selectedServer
+            targetController.selectedServerInfo = selectedServer
         } else{
             
         }
