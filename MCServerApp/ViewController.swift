@@ -21,37 +21,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var serverTableView: UITableView!
     
     
-    enum ServerReponseError: Error {
-        case fatal
-    }
     
-    struct ServerResponse: Codable {
-        struct CacheResponse: Codable{
-            let status: String
-            let ttl: Int
-            let insertion_time: String
-        }
-        struct VersionResponse: Codable{
-            let name: String
-        }
-        struct PlayersReponse: Codable{
-            let max: Int
-            let online: Int
-            let sample: [String]?
-        }
-        
-        let online: Bool
-        let status: Bool
-        let favicon_base64: String?
-        let source: String?
-        let took: Double?
-        let cache: CacheResponse?
-        let version: VersionResponse?
-        let players: PlayersReponse?
-      //  let description: DescriptionReponse?
-        let fetch: String?
-        let error: String?
-    }
     func pingServer(_ ipAddress:String) throws -> ServerResponse {
         let requestUrl =
         // .addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
@@ -112,6 +82,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    var selectedServer: ServerResponse!
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            
+            // Sets the variables to be gotten by the prepare for segue function
+        let server = serverList[indexPath.row]
+        do{
+            let selectedServer = try pingServer(server.ip)
+        } catch{
+            print("ERROR")
+        }
+            self.performSegue(withIdentifier: "serverDetails", sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "serverDetails"){
+            let destinationNavigationController = segue.destination as! ThirdViewController
+            let targetController = destinationNavigationController
+            
+            // Sets the variables in the second view controller
+            targetController.selectedServer = selectedServer
+        } else{
+            
+        }
+        
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

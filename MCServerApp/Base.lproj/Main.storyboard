@@ -98,6 +98,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="serverTableView" destination="x62-wQ-Ydg" id="mqr-rx-UyD"/>
+                        <segue destination="q3t-l8-eA7" kind="show" identifier="serverDetails" id="Sjc-wK-q1Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -177,6 +178,7 @@
                         <viewLayoutGuide key="safeArea" id="0SK-rf-hy0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4F3-Qd-cy2"/>
                     <connections>
                         <outlet property="bedRock" destination="cK2-lo-hSq" id="Af8-ac-6ZC"/>
                         <outlet property="ipAdress" destination="lUp-NC-lUF" id="bOz-lW-hPD"/>
