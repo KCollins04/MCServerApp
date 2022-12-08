@@ -17,6 +17,7 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var bedRock: UILabel!
     @IBOutlet weak var playerTableView: UITableView!
     
+    var selectedServer: ServerResponse!
     
     @IBOutlet weak var version: UILabel!
     
