@@ -37,7 +37,7 @@ class ThirdViewController: UIViewController {
             serverName.text = selectedServerInfo.name
            
             motDay.text = selectedServer.online ? "Online" : "Offline"
-            bedRock.text = selectedServerInfo.bedrock
+            bedRock.text = "\(selectedServerInfo.bedrock)"
             
 
             
