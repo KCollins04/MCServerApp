@@ -66,31 +66,20 @@ enum ServerReponseError: Error {
 }
 
 struct ServerResponse: Codable {
-    struct CacheResponse: Codable{
-        let status: String
-        let ttl: Int
-        let insertion_time: String
-    }
-    struct VersionResponse: Codable{
-        let name: String
-    }
     struct PlayersReponse: Codable{
         let max: Int
         let online: Int
-        let sample: [String]?
+        let list: [String]?
+    }
+    struct MOTDResponse: Codable{
+        let html: [String]
     }
     
     let online: Bool
-    let status: Bool
-    let favicon_base64: String?
-    let source: String?
-    let took: Double?
-    let cache: CacheResponse?
-    let version: VersionResponse?
+    let motd: MOTDResponse?
     let players: PlayersReponse?
-  //  let description: DescriptionReponse?
-    let fetch: String?
-    let error: String?
+    let icon: String?
+    let version: String?
 }
 
 //var serverList = defaults.object(forKey: "Servers") as? [Server] ?? [Server]()
