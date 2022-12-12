@@ -84,14 +84,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var selectedServer: ServerResponse!
     var selectedServerInfo: Server!
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
             // Sets the variables to be gotten by the prepare for segue function
         let server = serverList[indexPath.row]
         do{
-            let selectedServer = try pingServer(server.ip)
-            let selectedServerInfo = server
-            print(selectedServerInfo)
+            selectedServer = try pingServer(server.ip)
+            selectedServerInfo = server
             self.performSegue(withIdentifier: "serverDetails", sender: self)
         } catch{
             print("ERROR")
@@ -100,12 +100,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "serverDetails"){
             let destinationNavigationController = segue.destination as! ThirdViewController
             let targetController = destinationNavigationController
-            print("test")
-            print(selectedServer)
             // Sets the variables in the second view controller
             targetController.selectedServer = selectedServer
             targetController.selectedServerInfo = selectedServerInfo

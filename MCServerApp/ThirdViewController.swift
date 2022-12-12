@@ -25,12 +25,11 @@ class ThirdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(selectedServer)
         let imageData = Data(base64Encoded: String((selectedServer.favicon_base64 ?? defaultIcon).dropFirst(22)))
         if let imageData = imageData {
             playerImage.image = UIImage(data: imageData)
             
-            versionThird.text = selectedServer.version?.name
+            versionThird.text = String((selectedServer.version?.name ?? "REQUIRES MC UNKNOWN").dropFirst(8))
             
             ipAdress.text = selectedServerInfo.ip
             

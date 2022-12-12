@@ -187,6 +187,7 @@
                         <outlet property="playerTableView" destination="Q5M-Tq-1hb" id="ykz-SX-P44"/>
                         <outlet property="serverName" destination="NJN-4k-iO8" id="CAE-ti-Tgs"/>
                         <outlet property="version" destination="eY5-u4-cql" id="ICn-Wx-mQg"/>
+                        <outlet property="versionThird" destination="eY5-u4-cql" id="n86-JV-xwm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2q-Ub-dVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
