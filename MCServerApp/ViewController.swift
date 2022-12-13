@@ -22,10 +22,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
-    func pingServer(_ ipAddress:String) throws -> ServerResponse {
-        let requestUrl =
+    func pingServer(_ ipAddress:String, _ bedrock: Bool) throws -> ServerResponse {
+        var requestUrl =
         // .addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         "https://api.mcsrvstat.us/2/" + ipAddress
+        if bedrock{
+            requestUrl = "https://api.mcsrvstat.us/bedrock/2/" + ipAddress
+        }
         let url = URL(string: requestUrl)
         let data = (try? Data(contentsOf: url!))!
         do {
