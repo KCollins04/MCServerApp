@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func pingServer(_ ipAddress:String) throws -> ServerResponse {
         let requestUrl =
         // .addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-        "https://mc-api.net/v3/server/ping/" + ipAddress
+        "https://api.mcsrvstat.us/2/" + ipAddress
         let url = URL(string: requestUrl)
         let data = (try? Data(contentsOf: url!))!
         do {
@@ -52,7 +52,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let serverData: ServerResponse!
         do{
             try serverData = pingServer(server.ip)
-            let imageData = Data(base64Encoded: String((serverData.favicon_base64 ?? defaultIcon).dropFirst(22)))
+            let imageData = Data(base64Encoded: String((serverData.icon ?? defaultIcon).dropFirst(22)))
             if let imageData = imageData {
                 cell.serverIcon.image = UIImage(data: imageData)
             }
