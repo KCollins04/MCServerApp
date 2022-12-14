@@ -22,10 +22,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
-    func pingServer(_ ipAddress:String, _ bedrock: Bool) throws -> ServerResponse {
-        var requestUrl =
-        // .addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-        "https://api.mcsrvstat.us/2/" + ipAddress
+    func pingServer(_ ipAddress:String, _ bedrock: Bool = false) throws -> ServerResponse {
+        var requestUrl = "https://api.mcsrvstat.us/2/" + ipAddress
         if bedrock{
             requestUrl = "https://api.mcsrvstat.us/bedrock/2/" + ipAddress
         }
